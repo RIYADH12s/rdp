@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wavelength — Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="topbar">
+      <div class="brand-mark"><span class="dot"></span>Wavelength</div>
+      <div class="coin-pill"><span class="coin-icon"></span><span id="coinBalanceTop">—</span></div>
+    </div>
+
+    <div class="main-content">
+      <div class="profile-header">
+        <div class="avatar" id="profileAvatar"></div>
+        <div>
+          <h2 id="profileName">—</h2>
+          <p id="profileEmail">—</p>
+        </div>
+      </div>
+
+      <div class="balance-card">
+        <div class="label">Coin balance</div>
+        <div class="amount" id="coinBalanceMain">—</div>
+      </div>
+
+      <div class="section-label">Recharge coins</div>
+      <p style="color: var(--muted); font-size: 13px; margin: -4px 0 4px;">
+        Demo recharge — adds coins directly for testing. A real payment flow would run through a secure backend.
+      </p>
+      <div class="recharge-options">
+        <button class="recharge-chip" data-coins="50">
+          <div class="coins">+50</div>
+          <div class="price">Free demo</div>
+        </button>
+        <button class="recharge-chip" data-coins="150">
+          <div class="coins">+150</div>
+          <div class="price">Free demo</div>
+        </button>
+        <button class="recharge-chip" data-coins="300">
+          <div class="coins">+300</div>
+          <div class="price">Free demo</div>
+        </button>
+        <button class="recharge-chip" data-coins="1000">
+          <div class="coins">+1000</div>
+          <div class="price">Free demo</div>
+        </button>
+      </div>
+
+      <div class="section-label">Account</div>
+      <div class="field">
+        <label for="displayNameInput">Display name</label>
+        <input type="text" id="displayNameInput" />
+      </div>
+      <button class="btn-secondary" id="saveNameBtn">Save changes</button>
+
+      <button class="danger-link" id="logoutBtn">Sign out</button>
+    </div>
+
+    <nav class="bottom-nav">
+      <button class="nav-item" data-page="home">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        People
+      </button>
+      <button class="nav-item" data-page="match">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        Match
+      </button>
+      <button class="nav-item active" data-page="profile">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+        Profile
+      </button>
+    </nav>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="js/profile.js"></script>
+</body>
+</html>

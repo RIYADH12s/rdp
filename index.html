@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wavelength — Sign in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="auth-shell">
+    <div class="auth-header">
+      <div class="brand-mark"><span class="dot"></span>Wavelength</div>
+      <h1 id="formTitle">Welcome back</h1>
+      <p id="formSubtitle">Sign in to pick up where the conversation left off.</p>
+    </div>
+
+    <div class="error-banner" id="errorBanner"></div>
+
+    <form id="authForm">
+      <div class="field" id="nameField" style="display:none;">
+        <label for="nameInput">Your name</label>
+        <input type="text" id="nameInput" placeholder="e.g. Sam Rahman" autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="emailInput">Email</label>
+        <input type="email" id="emailInput" placeholder="you@example.com" autocomplete="email" required />
+      </div>
+      <div class="field">
+        <label for="passwordInput">Password</label>
+        <input type="password" id="passwordInput" placeholder="At least 6 characters" autocomplete="current-password" required minlength="6" />
+      </div>
+      <button type="submit" class="btn-primary" id="submitBtn">Sign in</button>
+    </form>
+
+    <div class="auth-switch" id="switchText">
+      New here? <button class="btn-link" id="switchBtn">Create an account</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

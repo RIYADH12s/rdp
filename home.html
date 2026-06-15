@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wavelength — All users</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="topbar">
+      <div class="brand-mark"><span class="dot"></span>Wavelength</div>
+      <div class="coin-pill"><span class="coin-icon"></span><span id="coinBalance">—</span></div>
+    </div>
+
+    <div class="main-content">
+      <div class="section-label">Online now</div>
+      <div id="onlineList"></div>
+
+      <div class="section-label">Everyone</div>
+      <div id="offlineList"></div>
+
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <div class="glyph">◌</div>
+        <p>No one else has joined yet.</p>
+        <p>Invite a friend to start your first call.</p>
+      </div>
+    </div>
+
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-page="home">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        People
+      </button>
+      <button class="nav-item" data-page="match">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        Match
+      </button>
+      <button class="nav-item" data-page="profile">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+        Profile
+      </button>
+    </nav>
+  </div>
+
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>
